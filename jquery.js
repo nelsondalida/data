@@ -1,7 +1,8 @@
 $(function()
 {
+    var staticURLP = 'https://raw.githubusercontent.com/nelsondalida/data/master/province.json';
     var provArr=[];
-    $.getJSON('province.json',function(data)
+    $.getJSON(staticURLP,function(data)
     {
         $.each(data,function(index,val)
         {
@@ -11,7 +12,6 @@ $(function()
 
     $('#DDregion').change(function(event)
     {
-        
         $region=$(this).val();
         var $x = $region;
         $htmlOption='<option value="0">Choose Your Province</option>';
@@ -34,8 +34,9 @@ $(function()
 });
 $(function()
 {
+    var staticURLC = 'https://raw.githubusercontent.com/nelsondalida/data/master/city.json';
     var cityArr=[];
-    $.getJSON('city.json',function(data)
+    $.getJSON(staticURLC,function(data)
     {
         $.each(data,function(index,val)
         {
@@ -67,8 +68,9 @@ $(function()
 });
 $(function()
 {
+    var staticURLB = 'https://raw.githubusercontent.com/nelsondalida/data/master/brgy.json';
     var brgyArr=[];
-    $.getJSON('barangay.json',function(data)
+    $.getJSON(staticURLB,function(data)
     {
         $.each(data,function(index,val)
         {
